@@ -76,7 +76,7 @@ function sendEdits() {
 
 
 function showRevisions () { /* textarea code is a cut and paste from createHTML - refactor */
-  var URL = 'http://conwasa.github.io/radiotext2/corrected_R4_text.html';
+  var URL = 'https://conwasa.github.io/radiotext2/corrected_R4_text.html';
   getAndRenderHTML(URL);
   var revisionsButton = document.getElementById("revisions-button");
   revisionsButton.innerHTML = '';
