@@ -1,5 +1,5 @@
 window.onload = function () {
-	setTimeout(showRevisionsButton, 5000)
+	setTimeout(showRevisionsButton, 10000)
 } 
 
 
@@ -8,15 +8,15 @@ console.log('goose');
 function reloadJSON() {
 	console.log('in reload json');
     var file = document.getElementById("selectJSON").value;
-    var URL = 'http://127.0.0.1:8080/' + file;
+    var URL = 'http://conwasa.github.io/radiotext2/' + file;
     getAndRenderJSON(URL);
 }
 
 console.log('hello');
 var ourRequest = new XMLHttpRequest();
-/* ourRequest.open('GET', 'http://127.0.0.1:8080/WorldAtOne-20180816_first_2mins.json'); */
-/* ourRequest.open('GET', 'http://127.0.0.1:8080/womans_hour_2mins.json') */
-var URL = 'http://127.0.0.1:8080/womans_hour_2mins.json';
+/* ourRequest.open('GET', 'http://conwasa.github.io/radiotext2/WorldAtOne-20180816_first_2mins.json'); */
+/* ourRequest.open('GET', 'http://conwasa.github.io/radiotext2/womans_hour_2mins.json') */
+var URL = 'http://conwasa.github.io/radiotext2/womans_hour_2mins.json';
 
 getAndRenderJSON(URL);
 
@@ -76,7 +76,7 @@ function sendEdits() {
 
 
 function showRevisions () { /* textarea code is a cut and paste from createHTML - refactor */
-  var URL = 'http://127.0.0.1:8080/corrected_R4_text.html';
+  var URL = 'http://conwasa.github.io/radiotext2/corrected_R4_text.html';
   getAndRenderHTML(URL);
   var revisionsButton = document.getElementById("revisions-button");
   revisionsButton.innerHTML = '';
