@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handlebars processing of static Watson JSON</title>
+  <link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="handlebars-v4.0.11.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+  </head>
+<body>
+
+<div class="page-wrap">
+  <h1>Handlebars processing of static Watson JSON</h1>
+<div class="top-row">
+  <div class="top-column">
+  <select id="selectJSON" onchange="reloadJSON()">
+    <option value="womans_hour_2mins.json">Woman's Hour  (2 mins)</option>
+    <option value="WorldAtOne-20180816_first_2mins.json">World at One (2 mins)</option>
+  </select>
+  </div>
+  <div class="column">&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+   <div class="column">
+  <div id="edit-button" class="buttons">click on text to correct transcription</div>
+   <div class="column">
+  <div id="revisions-button" class="buttons"></div>
+  </div>
+ </div>
+  <p>
+</div>
+<div id="text-container"></div>
+</div>
+<script id="textTemplate" type="text/x-handlebars-template">
+  {{#each results}}
+	{{#each alternatives}}
+	  {{transcript}}
+	{{/each}}
+  {{/each}}
+</script>
+
+
+</body>
+</html>
